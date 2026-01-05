@@ -3,7 +3,10 @@ name: Release Binaries
 on:
   release:
     types: [created]
-
+    
+permissions:
+  contents: write
+  
 jobs:
   build:
     name: Build for ${{ matrix.os }}
